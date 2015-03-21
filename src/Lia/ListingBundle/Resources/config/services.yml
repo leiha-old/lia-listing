@@ -1,0 +1,7 @@
+parameters:
+#    lia_listing.example.class: Lia\ListingBundle\Example
+
+services:
+#    lia_listing.example:
+#        class: %lia_listing.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
