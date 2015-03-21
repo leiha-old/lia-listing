@@ -1,0 +1,22 @@
+.lia-listing-filter{
+
+}
+
+.lia-listing-filter-add img{
+    position : relative;
+    top      : 4px;
+    padding  : 0 0px 0 5px;
+}
+
+.lia-listing-filter-list-item{
+    margin:3px 0 0 15px;
+    white-space: nowrap;
+}
+
+.lia-listing-filter-list-item img{
+    margin-right:5px;
+}
+
+.lia-listing-filter-list-item-op{
+    margin:0 5px 0 0;
+}

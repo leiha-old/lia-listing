@@ -1,0 +1,118 @@
+form *, body *{
+    font-family: Arial,serif;
+    
+}
+
+
+.lia-listing-container * {
+    font-size: 11pt;
+}
+
+th * {
+    vertical-align: middle;
+}
+.lia-listing-action-trigger {
+    display: inline-block;
+}
+
+th .lia-listing-actions {
+    display: inline-block;
+    padding: 0 5px 0 0;
+}
+
+.lia-listing-sorting img{
+    margin:0 2px;
+}
+
+.lia-listing-action-label{
+    margin:0 5px 0 0;
+}
+
+.lia-listing-icon > *{
+    display: inline-block;
+}
+
+/* ----- Listing Head ----- */
+
+.lia-listing-head .lia-listing-actions > *{
+    vertical-align: bottom;
+}
+
+/* + Menu */
+.lia-listing-menu {
+    position:relative;
+    display: inline-block;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-top: 1px solid #000;
+    border-radius: 10px 10px 0 0;
+    padding: 5px 10px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+/* + Add Action */
+.lia-listing-add {
+    background: url("../images/icons/add.png") no-repeat 5px 5px;
+    width : 26px;
+    position:relative;
+    display: inline-block;
+    border-left: 1px solid #000;
+    border-right: 1px solid #000;
+    border-top: 1px solid #000;
+    border-radius: 10px 10px 0 0;
+    padding: 5px 0 5px;
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.lia-listing-menu-action img{
+    position: relative;
+    top:4px;
+}
+/* ----- # ----- */
+
+/* ----- Listing Body ----- */
+
+.lia-listing-body{
+    margin:0 0 0 0;
+}
+
+.lia-listing-body table{
+    padding: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+    min-width: 500px;
+}
+
+.lia-listing-body tbody{
+    height: 50px;     /* Hauteur du reste des données */
+    overflow-y: auto;     /* Scroll du contenu du tableau */
+    overflow-x:hidden; /* Scroll horizontal caché */
+}
+
+.lia-listing-body  th,
+.lia-listing-body  td {
+    text-align: left;
+    border:1px solid #000;
+    padding:5px 5px 5px 10px;
+}
+
+.lia-listing-body  th{
+    font-weight: bold;
+}
+
+.lia-listing-body td.lia-listing-noData {
+    text-align: center;
+    vertical-align: middle;
+}
+
+.lia-listing-body .lia-listing-cell-editable{
+    padding:0 0 0 10px !important;
+}
+
+.lia-listing-body .lia-form-field-text{
+    border:0;
+}
+
+/* ----- # ----- */

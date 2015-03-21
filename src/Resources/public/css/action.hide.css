@@ -1,0 +1,78 @@
+.lia-listing-action-hide {
+    position: relative;
+    display: inline-block;
+    border: 1px solid #000;
+    background: #ffffff url("../images/icons/settings.png") no-repeat 5px;
+    padding:5px 5px 5px 25px;
+}
+
+.lia-listing-action-hide-content{
+    border: 1px solid #000;
+    background-color  : white;
+}
+
+.lia-listing-action-hide-content h3{
+    font-weight: bold;
+}
+
+.lia-listing-action-hide-content ul{
+    margin:5px;
+}
+
+.lia-listing-action-hide-content li{
+    padding:3px 5px;
+    border: 1px solid #000;
+    margin: 2px 0;
+    cursor: move;
+    background-color: #FFFFFF;
+}
+
+.lia-listing-action-hide-content li:hover{
+
+}
+
+
+
+
+.menu {
+    padding         : 10px;
+    background-color: #FFFFFF;
+    border          : 1px solid #000000;
+    min-width       : 100px;
+
+}
+.menu h6 {
+    font-weight   :bold;
+    margin-bottom : 5px;
+    padding       : 0 5px 5px 5px;
+}
+.menu  ul {
+    background-color: #FFFFFF;
+}
+.menu ul ul {
+    display : none;
+    position: absolute;
+}
+.menu, .menu ul ul{
+    border: 1px solid #000000;
+}
+.menu li {
+    list-style-type : none;
+    position        : relative;
+    color           : #000000;
+    padding         : 5px;
+    background-color: #FFFFFF;
+    white-space     : nowrap;
+    font-size       : 11pt;
+    cursor          : default;
+    margin          : 2px 0;
+}
+
+.menu > ul > li {
+    border          : 1px solid #000000;
+}
+
+.menu li:hover {
+    color: #FFFFFF !important;
+    background-color: #000000 !important;
+}

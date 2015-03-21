@@ -1,0 +1,34 @@
+{
+  "name": "lia/listing",
+  "description": "Lia Framework : Listing",
+  "homepage": "https://github.com/leiha/lia-listing/",
+  "version": "0.0.1",
+  "authors": [
+    {
+      "name": "Leiha Sellier",
+      "email": "leiha.sellier@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-0": { "Lia\\ListingBundle\\": "src/" }
+  },
+  "repositories": [
+    {
+	"type": "vcs",
+        "url": "https://github.com/leiha/lia-kernel.git"
+    },
+    {
+	"type": "vcs",
+        "url": "https://github.com/leiha/lia-form.git",
+    }
+  ],
+  "require": {
+        "lia/kernel": "dev-master@dev",
+        "lia/form": "dev-master@dev"
+  },
+  "extra": {
+    "branch-alias": {
+      "dev-master": "0.0.x-dev"
+    }
+  }
+}

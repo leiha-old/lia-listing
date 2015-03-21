@@ -1,0 +1,11 @@
+<div id="{{ controller.name|raw }}"></div>
+<script type="text/javascript">
+$(function(){
+    $lia.Listing.register("{{ controller.name|raw }}", {{ controller.settings|raw }})
+        .addColumns({{ controller.columns.getColumns('json')|raw }})
+        .setRows({{ controller.rows|raw }}, {{ controller.rows.length|raw }})
+        .setParams({{ controller.parameters|raw }})
+        .setForm({{ controller.form|raw }})
+        .render();
+});
+</script>
