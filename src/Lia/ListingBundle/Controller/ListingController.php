@@ -4,20 +4,20 @@ namespace Lia\ListingBundle\Controller;
 
 use Lia\FormBundle\Library\Form;
 
-use Lia\ListingBundle\Library\ParameterBag;
-use Lia\ListingBundle\Library\Repository\EntityRepository;
-use Lia\ListingBundle\Library\Repository\RepositoryEntityInterface;
-use Lia\ListingBundle\Library\Response;
-use Lia\ListingBundle\Library\SettingsBag;
+use Lia\ListingBundle\ParameterBag;
+use Lia\ListingBundle\Repository\EntityRepository;
+use Lia\ListingBundle\Repository\RepositoryEntityInterface;
+use Lia\ListingBundle\Response;
+use Lia\ListingBundle\SettingsBag;
 
 use Lia\Library\Asset\AssetTrait;
 use Lia\Library\Asset\AssetInterface;
 use Lia\Library\Controller\Controller;
-use Lia\ListingBundle\Library\Column;
-use Lia\ListingBundle\Library\Colgroup;
-use Lia\ListingBundle\Library\Columns;
-use Lia\ListingBundle\Library\ModelInterface;
-use Lia\ListingBundle\Library\Rows;
+use Lia\ListingBundle\Column;
+use Lia\ListingBundle\Colgroup;
+use Lia\ListingBundle\Columns;
+use Lia\ListingBundle\ModelInterface;
+use Lia\ListingBundle\Rows;
 
 
 abstract class ListingController

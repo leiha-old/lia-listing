@@ -2,23 +2,23 @@
 
 namespace Lia\ListingBundle\Controller;
 
-use Lia\Library\Annotation\ReflectionObject;
-use Lia\Library\Annotation\ReflexionProperty;
-use Lia\ListingBundle\Library\ListingException;
+use Lia\KernelBundle\Annotation\ReflectionObject;
+use Lia\KernelBundle\Annotation\ReflexionProperty;
+use Lia\ListingBundle\ListingException;
 
 abstract class ListingAnnotationController
     extends ListingController
 {
     /**
      * @param string $className Currently it's an entity name
-     * @throws \Lia\ListingBundle\Library\ListingException
+     * @throws \Lia\ListingBundle\ListingException
      * @return $this
      */
     public function extractAnnotationConfig($className){
         $reflectionClass = new ReflectionObject($className);
 
         // if Class has a Listing annotation
-        if($config = $reflectionClass->getClassAnnotation('Lia\ListingBundle\Library\Mapping\Listing')){
+        if($config = $reflectionClass->getClassAnnotation('Lia\ListingBundle\Mapping\Listing')){
             $this->checkForActionsAnnotation($reflectionClass, $config);
 
             // Check properties class for Columns annotation
@@ -43,7 +43,7 @@ abstract class ListingAnnotationController
      * @param array $config
      */
     protected function checkForActionsAnnotation(ReflectionObject $reflectionClass, array &$config){
-        if(!$annotations = $reflectionClass->getClassAnnotation('Lia\ListingBundle\Library\Mapping\Actions')){
+        if(!$annotations = $reflectionClass->getClassAnnotation('Lia\ListingBundle\Mapping\Actions')){
             return;
         }
         $config['actions'] = $annotations;
@@ -57,7 +57,7 @@ abstract class ListingAnnotationController
      */
     protected function checkForParamsAnnotations($className, ReflectionObject $reflectionClass, array $columns){
         if($annotations = $reflectionClass->getClassAnnotation(
-            'Lia\ListingBundle\Library\Mapping\Columns\Order',
+            'Lia\ListingBundle\Mapping\Columns\Order',
             true
         )){
             /**
@@ -139,7 +139,7 @@ abstract class ListingAnnotationController
      */
     protected function checkPropertyForColumnAnnotationsConfig($name, ReflexionProperty $property){
         // if Property haven't a Column annotation do nothing !
-        $config = $property->getAnnotation('Lia\ListingBundle\Library\Mapping\Column');
+        $config = $property->getAnnotation('Lia\ListingBundle\Mapping\Column');
         if(!is_null($config)){
             $this->checkPropertyForColumnAnnotationsConfigBase   ($name, $property, $config);
             $this->checkPropertyForColumnAnnotationsConfigActions($property, $config);
@@ -155,7 +155,7 @@ abstract class ListingAnnotationController
      * @param array $config
      */
     protected function checkPropertyForColumnAnnotationsConfigActions(ReflexionProperty $property, array &$config){
-        if(!$annotations = $property->getAnnotation('Lia\ListingBundle\Library\Mapping\Column\Actions')){
+        if(!$annotations = $property->getAnnotation('Lia\ListingBundle\Mapping\Column\Actions')){
             return;
         }
         $config['actions'] = $annotations;
@@ -166,7 +166,7 @@ abstract class ListingAnnotationController
      * @param array $config
      */
     protected function checkPropertyForColumnAnnotationsConfigHooks(ReflexionProperty $property, array &$config){
-        if(!$annotations = $property->getAnnotation('Lia\ListingBundle\Library\Mapping\Column\Hooks')){
+        if(!$annotations = $property->getAnnotation('Lia\ListingBundle\Mapping\Column\Hooks')){
             return;
         }
         $config['hooks'] = $annotations;
